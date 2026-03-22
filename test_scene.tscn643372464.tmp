@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://14ldeld0kba3"]
+
+[ext_resource type="Script" uid="uid://dlbgogwvcedcq" path="res://camera_container.gd" id="1_ia1lp"]
+[ext_resource type="PackedScene" uid="uid://cmajgq7gxh5fq" path="res://player.tscn" id="2_sasra"]
+
+[sub_resource type="Environment" id="Environment_ia1lp"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.24
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ia1lp"]
+
+[node name="root" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ia1lp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="floor" type="CSGBox3D" parent="StaticBody3D"]
+size = Vector3(20, 1, 20)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, -10, 0)
+shape = SubResource("BoxShape3D_ia1lp")
+
+[node name="camera_container" type="Node3D" parent="." node_paths=PackedStringArray("target")]
+unique_name_in_owner = true
+script = ExtResource("1_ia1lp")
+target = NodePath("../Player")
+
+[node name="camera" type="Camera3D" parent="camera_container"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 1.4698, 1.83674)
+
+[node name="Player" parent="." instance=ExtResource("2_sasra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.138233, 1.19209e-07, -0.516829)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.80221, 0)
+light_energy = 3.225
+light_indirect_energy = 10.697
+omni_range = 12.599

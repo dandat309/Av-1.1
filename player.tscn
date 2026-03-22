@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cmajgq7gxh5fq"]
+
+[ext_resource type="Script" uid="uid://dgp2f1owy0tqq" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="PackedScene" uid="uid://bf516kenimlhw" path="res://KayKit_Prototype_Bits_1.0_FREE/Assets/fbx/Dummy_Base.fbx" id="2_onrkg"]
+[ext_resource type="PackedScene" uid="uid://bfvr0a024iit" path="res://kenney_blocky-characters_2.0/Models/FBX format/character-b.fbx" id="3_i3pqv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4flbx"]
+albedo_color = Color(1, 0.0941176, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i3pqv"]
+size = Vector3(1.067627, 1.1960449, 1)
+
+[node name="Player" type="CharacterBody3D" unique_id=1328362478 groups=["player"]]
+script = ExtResource("1_4flbx")
+
+[node name="body" type="CSGCylinder3D" parent="." unique_id=1180725661]
+transform = Transform3D(1, 0, 0, 0, 0.7, 0, 0, 0, 1, 0, 0, 0)
+visible = false
+material = SubResource("StandardMaterial3D_4flbx")
+
+[node name="col" type="CollisionShape3D" parent="." unique_id=1938767360 groups=["player"]]
+transform = Transform3D(1, 0, 0, 0, 1.25157, 0, 0, 0, 1, -0.0012817383, -0.18651605, 0)
+shape = SubResource("BoxShape3D_i3pqv")
+
+[node name="Dummy_Base" parent="." unique_id=442894354 instance=ExtResource("2_onrkg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+
+[node name="char" parent="." unique_id=905657785 instance=ExtResource("3_i3pqv")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, -1, 0)
+
+[node name="leg-right" parent="char/character-b/root" index="1"]
+transparency = 1.0
+
+[node name="arm-left" parent="char/character-b/root/torso" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0.4, 1.1, -0.1)
+
+[node name="arm-right" parent="char/character-b/root/torso" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, -0.4, 1.1, -0.1)
+
+[node name="head" parent="char/character-b/root/torso" index="2"]
+transform = Transform3D(0.09999998, 0, 0, 0, 0.1, 0, 0, 0, 0.09999998, 0, 1.2, 0)
+
+[editable path="char"]

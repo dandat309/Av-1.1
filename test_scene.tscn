@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://14ldeld0kba3"]
+
+[ext_resource type="PackedScene" uid="uid://bv1wnp7gkbfhj" path="res://colle.tscn" id="2_ia1lp"]
+[ext_resource type="PackedScene" uid="uid://cmajgq7gxh5fq" path="res://player.tscn" id="2_sasra"]
+[ext_resource type="PackedScene" uid="uid://cuvd4ufagnvds" path="res://DeathBlock.tscn" id="3_sasra"]
+[ext_resource type="PackedScene" uid="uid://faxgr7ihugxg" path="res://colle2.tscn" id="4_coq8p"]
+
+[sub_resource type="Environment" id="Environment_ia1lp"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.24
+glow_enabled = true
+
+[node name="root" type="Node3D" unique_id=1591079529]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1356440074]
+environment = SubResource("Environment_ia1lp")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1699529841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3748703, 4.80221, -15.387449)
+light_energy = 3.225
+light_indirect_energy = 10.697
+shadow_enabled = true
+omni_range = 107.26113
+
+[node name="Player" parent="." unique_id=1095986329 instance=ExtResource("2_sasra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.21253, 2.2847207, -15.362464)
+
+[node name="floor" type="CSGBox3D" parent="." unique_id=1159016955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.871915, -2.2653441, 10.359396)
+use_collision = true
+size = Vector3(3.506195, 0.17919922, 3.8686523)
+
+[node name="floor2" type="CSGBox3D" parent="." unique_id=586827292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9013777, 1.2068014, -15.71302)
+use_collision = true
+size = Vector3(3.566101, 0.111816406, 3.8686523)
+
+[node name="floor3" type="CSGBox3D" parent="." unique_id=611805370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1054425, 0.8633392, -13.337765)
+use_collision = true
+size = Vector3(3.566101, 0.14831543, 3.8686523)
+
+[node name="floor4" type="CSGBox3D" parent="." unique_id=1657176255]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3829131, -1.305625, -8.733258)
+use_collision = true
+size = Vector3(3.566101, 0.13562012, 3.8686523)
+
+[node name="camera" type="Camera3D" parent="." unique_id=1170732276]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.776172, 3.7175798, -3.7559395)
+current = true
+fov = 45.0
+
+[node name="floor5" type="CSGBox3D" parent="." unique_id=1496075189]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8756447, -2.759035, -2.1753483)
+use_collision = true
+size = Vector3(3.566101, 0.1973877, 3.8686523)
+
+[node name="floor6" type="CSGBox3D" parent="." unique_id=195577578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0321407, -2.1368084, 2.7818346)
+use_collision = true
+size = Vector3(3.566101, 0.15625, 3.8686523)
+
+[node name="floor7" type="CSGBox3D" parent="." unique_id=1967112807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7794967, -1.5753806, 8.467905)
+use_collision = true
+size = Vector3(4.606781, 0.15185547, 4.5979004)
+
+[node name="floor8" type="CSGBox3D" parent="." unique_id=640592189]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6158476, -2.2797909, 10.50791)
+use_collision = true
+size = Vector3(3.566101, 0.10839844, 3.8686523)
+
+[node name="floor9" type="CSGBox3D" parent="." unique_id=925296919]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5538435, 0.90653515, -15.2466755)
+use_collision = true
+size = Vector3(3.566101, 0.1385498, 4.053955)
+
+[node name="colle" parent="." unique_id=1200634749 instance=ExtResource("2_ia1lp")]
+transform = Transform3D(1, 0, 0, 0, 0.9396926, 0.34202012, 0, -0.34202012, 0.9396926, -7.2965064, 1.9028814, -16.644257)
+
+[node name="colle2" parent="." unique_id=2010873861 instance=ExtResource("2_ia1lp")]
+transform = Transform3D(1, 0, 0, 0, 0.76604444, 0.6427876, 0, -0.6427876, 0.76604444, -2.9051373, 1.5462394, -13.906874)
+
+[node name="colle3" parent="." unique_id=1435477527 instance=ExtResource("2_ia1lp")]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.8660253, 0, -0.8660253, 0.5, -0.4639368, -1.746917, -2.144333)
+
+[node name="colle4" parent="." unique_id=1373601975 instance=ExtResource("2_ia1lp")]
+transform = Transform3D(1, 0, 0, 0, 0.17364821, 0.98480767, 0, -0.98480767, 0.17364821, -1.3632927, -1.2229712, 2.3054461)
+
+[node name="colle5" parent="." unique_id=59574235 instance=ExtResource("2_ia1lp")]
+transform = Transform3D(1, 0, 0, 0, -0.93969244, 0.34202018, 0, -0.34202018, -0.93969244, -7.4989824, -1.5265074, 10.3937025)
+
+[node name="colle6" parent="." unique_id=1899231002 instance=ExtResource("2_ia1lp")]
+transform = Transform3D(1, 0, 0, 0, -0.5, -0.8660251, 0, 0.8660251, -0.5, -3.115222, -0.63869655, 7.612096)
+
+[node name="ENd" parent="." unique_id=1508244363 instance=ExtResource("4_coq8p")]
+transform = Transform3D(1, 0, 0, 0, -0.1736481, 0.9848077, 0, -0.9848077, -0.1736481, -13.717218, -1.4362774, 10.537065)
+
+[node name="DeathBlock" parent="." unique_id=515951802 instance=ExtResource("3_sasra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2712994, -5.8272953, -3.287548)

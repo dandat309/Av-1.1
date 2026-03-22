@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bv1wnp7gkbfhj"]
+
+[ext_resource type="Script" uid="uid://gy57nu5ux242" path="res://colle.gd" id="1_1ybbw"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xnto3"]
+radius = 0.4563336
+
+[node name="colle" type="Area3D" unique_id=1200634749]
+transform = Transform3D(1, 0, 0, 0, 0.9396927, 0.34202015, 0, -0.34202015, 0.9396927, 0, 0, 0)
+script = ExtResource("1_1ybbw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=507655020]
+shape = SubResource("SphereShape3D_xnto3")
+
+[node name="Visual" type="CSGSphere3D" parent="." unique_id=1854169302]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, -2.9802322e-08, 0, 2.9802322e-08, 0.99999994, 0, 0, 0)

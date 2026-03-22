@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dmrttkhe0wr5a"]
+
+[ext_resource type="Texture2D" uid="uid://ja46hb4qt0ki" path="res://Texto do seu parágrafo.png" id="1_4i0ai"]
+[ext_resource type="Script" uid="uid://bvgo345jg2tey" path="res://v_itoria.gd" id="1_6pt88"]
+[ext_resource type="Texture2D" uid="uid://djyo82xs2a7gc" path="res://Design sem nome.png" id="2_6pt88"]
+
+[node name="Control" type="Control" unique_id=1601725168]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6pt88")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1327732877]
+layout_mode = 0
+offset_right = 1134.0
+offset_bottom = 639.0
+texture = ExtResource("1_4i0ai")
+expand_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1282893440]
+layout_mode = 0
+offset_left = 818.0
+offset_top = 478.0
+offset_right = 1144.0
+offset_bottom = 639.0
+texture_normal = ExtResource("2_6pt88")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
