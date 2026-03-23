@@ -100,4 +100,4 @@ transform = Transform3D(1, 0, 0, 0, -0.5, -0.8660251, 0, 0.8660251, -0.5, -3.115
 transform = Transform3D(1, 0, 0, 0, -0.1736481, 0.9848077, 0, -0.9848077, -0.1736481, -13.717218, -1.4362774, 10.537065)
 
 [node name="DeathBlock" parent="." unique_id=515951802 instance=ExtResource("3_sasra")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2712994, -5.8272953, -3.287548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1893635, -5.827299, -3.3104286)

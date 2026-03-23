@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cuvd4ufagnvds"]
 
-[ext_resource type="Script" uid="uid://v7d8hy8o26by" path="res://morte.gd" id="1_2amgu"]
+[ext_resource type="Script" uid="uid://5ejekykbfgjy" path="res://death_block2.gd" id="1_u7hup"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8av2b"]
 size = Vector3(75.243454, 1, 60.61492)
@@ -10,7 +10,7 @@ albedo_color = Color(0.105882, 0.415686, 1, 1)
 
 [node name="DeathBLock" type="Area3D" unique_id=515951802 groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.632183, 0, 0)
-script = ExtResource("1_2amgu")
+script = ExtResource("1_u7hup")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=262181728]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.878899, 0, 1.0068665)
